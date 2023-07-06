@@ -30,7 +30,7 @@
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 		embedded_svc.settings.extraPrechatFormDetails = [{  
 		    "label":"UUID",
-		    "value":"andres@agency73.com",
+		    "value":"",
 		    "transcriptFields":[ "UUID__c" ],
 		    "displayToAgent":true
 		}, {
@@ -48,7 +48,13 @@
                    "value": "john.doe@salesforce.com",
 		   "transcriptFields":[ "Email__c" ],
                    "displayToAgent": true
-		}];
+		}, {
+		    "label":"Account Id",
+		    "value":"0010500000Xw0jMAAR",
+		    "transcriptFields":[ "AccountId" ],
+		    "displayToAgent":true
+		}, {
+			];
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
