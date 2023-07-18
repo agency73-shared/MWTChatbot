@@ -46,7 +46,7 @@ function receiveMessage(event) {
 		embedded_svc.settings.chatbotAvatarImgURL = "https://midwesttape--flowmigr82.sandbox.file.force.com/servlet/servlet.ImageServer?id=01505000000cCSx&oid=00D050000008r7K&lastMod=1689611783000"
 
 		embedded_svc.settings.defaultMinimizedText = 'Need help?'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+		//embedded_svc.settings.disabledMinimizedText = 'AI taking a break..'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
@@ -100,7 +100,7 @@ function receiveMessage(event) {
 				buttonId: '573050000008RrR',
 				baseLiveAgentURL: 'https://d.la2-c1cs-ia5.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Chat_Team',
-				isOfflineSupportEnabled: true
+				isOfflineSupportEnabled: false
 			}
 		);
 	};
