@@ -79,6 +79,11 @@ function receiveMessage(event) {
                    "value": "john.doe@salesforce.com",
 		   "transcriptFields":[ "Email__c" ],
                    "displayToAgent": true
+		}, {
+		   "label": "Customer #",
+                   "value": "1000003130",
+		   "transcriptFields":[ "Customer_Master__c" ],
+                   "displayToAgent": true
 		}];
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
