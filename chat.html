@@ -39,14 +39,24 @@ function receiveMessage(event) {
 </script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
  </script>
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #00aeef;
+		font-family: "Source Sans Pro", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #00aeef;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = 'en-US'; //For example, enter 'en' or 'en-US'
-		embedded_svc.settings.chatbotAvatarImgURL = "https://midwesttape--flowmigr82.sandbox.file.force.com/servlet/servlet.ImageServer?id=01505000000ddto&oid=00D050000008r7K&lastMod=1699283240000"
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-		embedded_svc.settings.defaultMinimizedText = 'Chat with us!'; //(Defaults to Chat with an Expert)
-		embedded_svc.settings.disabledMinimizedText = 'AI taking a break..'; //(Defaults to Agent Offline)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
@@ -59,46 +69,21 @@ function receiveMessage(event) {
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-		embedded_svc.settings.extraPrechatFormDetails = [{  
-		    "label": "UUID",
-		    "value": "dbee07c3-ad09-0c1f-e053-0100007f98ca",
-		    "transcriptFields":[ "UUID__c" ],
-		    "displayToAgent": true
-		}, {
-		   "label": "First Name",
-  		   "value": "Jonathan",
-		   "transcriptFields":[ "First_Name__c" ],
- 		   "displayToAgent": true
-		},{
-		   "label": "Last Name",
-                   "value": "Dorsev",
-		   "transcriptFields":[ "Last_Name__c" ],
-  		   "displayToAgent": true
-		}, {
-		   "label": "Email",
-                   "value": "testmidwesttape@gmail.com",
-		   "transcriptFields":[ "Email__c" ],
-                   "displayToAgent": true
-		}, {
-		   "label": "Customer #",
-                   "value": "1000002295",
-		   "transcriptFields":[ "Customer_Master__c" ],
-                   "displayToAgent": true
-		}];
+
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://midwesttape--flowmigr82.sandbox.my.salesforce.com',
-			'https://midwesttape--flowmigr82.sandbox.my.site.com/',
+			'https://midwesttape--partial.sandbox.my.salesforce.com',
+			'https://midwesttape--partial.sandbox.my.site.com/',
 			gslbBaseURL,
-			'00D050000008r7K',
+			'00DU9000003L5nl',
 			'Chat_Team',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia5.salesforceliveagent.com/content',
-				deploymentId: '572050000008RFY',
-				buttonId: '573050000008RrR',
-				baseLiveAgentURL: 'https://d.la2-c1cs-ia5.salesforceliveagent.com/chat',
+				baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-lywfpd.salesforceliveagent.com/content',
+				deploymentId: '572Rj0000000Nav',
+				buttonId: '573Rj0000000Ak9',
+				baseLiveAgentURL: 'https://d.la12s-core1.sfdc-lywfpd.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Chat_Team',
 				isOfflineSupportEnabled: false
 			}
@@ -107,7 +92,7 @@ function receiveMessage(event) {
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://midwesttape--flowmigr82.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://midwesttape--partial.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
