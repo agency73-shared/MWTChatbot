@@ -1,3 +1,4 @@
+<html>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -17,3 +18,4 @@
 	};
 </script>
 <script type='text/javascript' src='https://midwesttape--partial.sandbox.my.site.com/ESWNewChatDeployment1757266411355/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</html>
